@@ -1,0 +1,211 @@
+{
+ "_what": "Every package the OCC needs. Runtime ones are installed on the server and must be under a permissive license; test-only ones never are. Checked by tests/unit/test_layout.py. bundled_assets (files shipped inside the OCC, each with its license) and tools_run_not_shipped (programs the checks run when installed) are kept by hand.",
+ "runtime": [
+  {
+   "name": "annotated-doc",
+   "version": "0.0.5",
+   "license": "MIT"
+  },
+  {
+   "name": "annotated-types",
+   "version": "0.8.0",
+   "license": "MIT"
+  },
+  {
+   "name": "anyio",
+   "version": "4.15.1",
+   "license": "MIT"
+  },
+  {
+   "name": "asn1crypto",
+   "version": "1.5.1",
+   "license": "MIT"
+  },
+  {
+   "name": "cffi",
+   "version": "2.1.1",
+   "license": "MIT-0"
+  },
+  {
+   "name": "click",
+   "version": "8.5.0",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "cryptography",
+   "version": "46.0.3",
+   "license": "Apache-2.0 OR BSD-3-Clause"
+  },
+  {
+   "name": "fastapi",
+   "version": "0.162.0",
+   "license": "MIT"
+  },
+  {
+   "name": "h11",
+   "version": "0.16.0",
+   "license": "MIT"
+  },
+  {
+   "name": "idna",
+   "version": "3.20",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "nh3",
+   "version": "0.3.7",
+   "license": "MIT"
+  },
+  {
+   "name": "opentelemetry-api",
+   "version": "1.45.1",
+   "license": "Apache-2.0"
+  },
+  {
+   "name": "pg8000",
+   "version": "1.31.6",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "pycparser",
+   "version": "3.12",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "pydantic",
+   "version": "2.14.1",
+   "license": "MIT"
+  },
+  {
+   "name": "pydantic-core",
+   "version": "2.50.1",
+   "license": "MIT"
+  },
+  {
+   "name": "pymysql",
+   "version": "1.1.2",
+   "license": "MIT"
+  },
+  {
+   "name": "python-dateutil",
+   "version": "3.0.0",
+   "license": "Apache-2.0 OR BSD-3-Clause"
+  },
+  {
+   "name": "python-multipart",
+   "version": "0.0.30",
+   "license": "Apache-2.0"
+  },
+  {
+   "name": "scramp",
+   "version": "1.5.0",
+   "license": "MIT-0"
+  },
+  {
+   "name": "six",
+   "version": "1.17.0",
+   "license": "MIT"
+  },
+  {
+   "name": "starlette",
+   "version": "1.10.0",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "typing-extensions",
+   "version": "4.16.0",
+   "license": "PSF-2.0"
+  },
+  {
+   "name": "typing-inspection",
+   "version": "0.4.4",
+   "license": "MIT"
+  },
+  {
+   "name": "tzdata",
+   "version": "2026.6",
+   "license": "Apache-2.0"
+  },
+  {
+   "name": "uvicorn",
+   "version": "0.54.0",
+   "license": "BSD-3-Clause"
+  }
+ ],
+ "test_only": [
+  {
+   "name": "certifi",
+   "version": "2026.10.23",
+   "license": "MPL-2.0"
+  },
+  {
+   "name": "httpcore",
+   "version": "1.0.9",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "httpx",
+   "version": "0.28.1",
+   "license": "BSD-3-Clause"
+  },
+  {
+   "name": "iniconfig",
+   "version": "2.3.1",
+   "license": "MIT"
+  },
+  {
+   "name": "packaging",
+   "version": "26.3",
+   "license": "Apache-2.0 OR BSD-2-Clause"
+  },
+  {
+   "name": "pluggy",
+   "version": "1.7.0",
+   "license": "MIT"
+  },
+  {
+   "name": "pygments",
+   "version": "2.21.0",
+   "license": "BSD-2-Clause"
+  },
+  {
+   "name": "pytest",
+   "version": "9.2.0",
+   "license": "MIT"
+  }
+ ],
+ "bundled_assets": [
+  {
+   "name": "DejaVu Sans, DejaVu Sans Bold (occ/exports/fonts)",
+   "version": "2.37 (Debian fonts-dejavu-core 2.37-8build1)",
+   "license": "Bitstream-Vera (DejaVu changes public domain)",
+   "why": "embedded, subset, in PDF/A exports, so a PDF/A file carries its fonts; license text in occ/exports/fonts/LICENSE-DejaVu"
+  }
+ ],
+ "tools_run_not_shipped": [
+  {
+   "name": "minisign",
+   "version": "0.12",
+   "license": "ISC",
+   "why": "the unit tests verify OCC signatures with the stock tool when it is installed, so a signature is proved readable by others; OCC_MINISIGN names it, or PATH"
+  },
+  {
+   "name": "OpenSSL (openssl ts -verify)",
+   "version": "3.5.5 (system)",
+   "license": "Apache-2.0",
+   "why": "the unit tests verify OCC timestamp tokens with the stock tool, so a token is proved readable by others"
+  },
+  {
+   "name": "veraPDF greenfield",
+   "version": "1.30.3",
+   "license": "GPL-3.0-or-later OR MPL-2.0",
+   "why": "validates the OCC's PDF/A-2b output when OCC_VERAPDF names it; run as a checker only, never shipped or imported"
+  },
+  {
+   "name": "Eclipse Temurin JRE",
+   "version": "21.0.13",
+   "license": "GPL-2.0 WITH Classpath-exception-2.0",
+   "why": "runs veraPDF; not shipped"
+  }
+ ]
+}

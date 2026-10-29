@@ -1,0 +1,422 @@
+{
+ "api_keys": [
+  "carried",
+  "api_keys",
+  "hash kept as legacy-bcrypt if it verifies (the format is confirmed on real data), else keys re-issued"
+ ],
+ "audit_logs": [
+  "carried",
+  "audit_events",
+  "origin elabftw-import, orig_at = created_at, category mapped"
+ ],
+ "authfail": [
+  "not carried",
+  "-",
+  "password sign-in failures; the OCC has no password sign-in"
+ ],
+ "branding": [
+  "carried",
+  "site_assets + file_blobs",
+  "the logo"
+ ],
+ "compounds": [
+  "carried",
+  "compounds",
+  "registry ids to identifiers, GHS flags to hazards"
+ ],
+ "compounds2experiments": [
+  "carried",
+  "record_compounds",
+  ""
+ ],
+ "compounds2experiments_templates": [
+  "carried",
+  "record_compounds",
+  ""
+ ],
+ "compounds2items": [
+  "carried",
+  "record_compounds",
+  ""
+ ],
+ "compounds2items_types": [
+  "carried",
+  "record_compounds",
+  ""
+ ],
+ "compounds_fingerprints": [
+  "derived",
+  "-",
+  "structure-search index; rebuilt if structure search is ever added (not in 2.x New)"
+ ],
+ "config": [
+  "carried",
+  "site_config",
+  "secrets sealed; password-only settings stored, inert"
+ ],
+ "containers2experiments": [
+  "carried",
+  "record_containers",
+  ""
+ ],
+ "containers2experiments_templates": [
+  "carried",
+  "record_containers",
+  ""
+ ],
+ "containers2items": [
+  "carried",
+  "record_containers",
+  ""
+ ],
+ "containers2items_types": [
+  "carried",
+  "record_containers",
+  ""
+ ],
+ "experiments": [
+  "carried",
+  "records (kind 1) + record_access",
+  "id preserved; canread/canwrite split into base + record_access"
+ ],
+ "experiments2experiments": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "experiments2items": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "experiments_categories": [
+  "carried",
+  "categories (group 1)",
+  "id preserved"
+ ],
+ "experiments_changelog": [
+  "carried",
+  "audit_events",
+  "origin elabftw-import; old_value derived from the previous row for the same field"
+ ],
+ "experiments_comments": [
+  "carried",
+  "comments",
+  "new ids (id_map)"
+ ],
+ "experiments_edit_mode": [
+  "not carried",
+  "-",
+  "transient editing lock; expires"
+ ],
+ "experiments_request_actions": [
+  "carried",
+  "request_actions",
+  ""
+ ],
+ "experiments_revisions": [
+  "carried",
+  "revisions",
+  ""
+ ],
+ "experiments_status": [
+  "carried",
+  "statuses (group 1)",
+  "id preserved"
+ ],
+ "experiments_steps": [
+  "carried",
+  "steps",
+  ""
+ ],
+ "experiments_templates": [
+  "carried",
+  "records (kind 3) + record_access",
+  "id preserved; *_target to canread_target/canwrite_target"
+ ],
+ "experiments_templates2experiments": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "experiments_templates2items": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "experiments_templates_changelog": [
+  "carried",
+  "audit_events",
+  ""
+ ],
+ "experiments_templates_comments": [
+  "carried",
+  "comments",
+  ""
+ ],
+ "experiments_templates_edit_mode": [
+  "not carried",
+  "-",
+  "transient"
+ ],
+ "experiments_templates_request_actions": [
+  "carried",
+  "request_actions",
+  ""
+ ],
+ "experiments_templates_revisions": [
+  "carried",
+  "revisions",
+  ""
+ ],
+ "experiments_templates_steps": [
+  "carried",
+  "steps",
+  ""
+ ],
+ "exports": [
+  "not carried",
+  "-",
+  "export queue files are regenerated on demand"
+ ],
+ "favtags2users": [
+  "carried",
+  "favorite_tags",
+  ""
+ ],
+ "idps": [
+  "carried",
+  "idps",
+  "the 3.x entity id differs; the identity provider registers the OCC as a new service provider"
+ ],
+ "idps_certs": [
+  "carried",
+  "idp_certs",
+  ""
+ ],
+ "idps_endpoints": [
+  "carried",
+  "idp_endpoints",
+  ""
+ ],
+ "idps_sources": [
+  "carried",
+  "idp_sources",
+  ""
+ ],
+ "instance2rors": [
+  "not carried",
+  "-",
+  "empty; research-organization registry links are not used by 2.x New"
+ ],
+ "items": [
+  "carried",
+  "records (kind 2) + record_access + resource_booking",
+  "id preserved"
+ ],
+ "items2experiments": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "items2items": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "items_categories": [
+  "carried",
+  "categories (group 2)",
+  "id preserved; the API calls it resources_categories"
+ ],
+ "items_changelog": [
+  "carried",
+  "audit_events",
+  ""
+ ],
+ "items_comments": [
+  "carried",
+  "comments",
+  ""
+ ],
+ "items_edit_mode": [
+  "not carried",
+  "-",
+  "transient"
+ ],
+ "items_request_actions": [
+  "carried",
+  "request_actions",
+  ""
+ ],
+ "items_revisions": [
+  "carried",
+  "revisions",
+  ""
+ ],
+ "items_status": [
+  "carried",
+  "statuses (group 2)",
+  "id preserved"
+ ],
+ "items_steps": [
+  "carried",
+  "steps",
+  ""
+ ],
+ "items_types": [
+  "carried",
+  "records (kind 4) + record_access + resource_booking",
+  "id preserved"
+ ],
+ "items_types2experiments": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "items_types2items": [
+  "carried",
+  "record_links",
+  ""
+ ],
+ "items_types_changelog": [
+  "carried",
+  "audit_events",
+  ""
+ ],
+ "items_types_comments": [
+  "carried",
+  "comments",
+  ""
+ ],
+ "items_types_edit_mode": [
+  "not carried",
+  "-",
+  "transient"
+ ],
+ "items_types_request_actions": [
+  "carried",
+  "request_actions",
+  ""
+ ],
+ "items_types_revisions": [
+  "carried",
+  "revisions",
+  ""
+ ],
+ "items_types_steps": [
+  "carried",
+  "steps",
+  ""
+ ],
+ "lockout_devices": [
+  "not carried",
+  "-",
+  "password sign-in lockout; no password sign-in"
+ ],
+ "notifications": [
+  "carried",
+  "notifications",
+  ""
+ ],
+ "pin_experiments2users": [
+  "carried",
+  "pins",
+  ""
+ ],
+ "pin_experiments_templates2users": [
+  "carried",
+  "pins",
+  ""
+ ],
+ "pin_items2users": [
+  "carried",
+  "pins",
+  ""
+ ],
+ "pin_items_types2users": [
+  "carried",
+  "pins",
+  ""
+ ],
+ "procurement_requests": [
+  "carried",
+  "procurement_requests",
+  ""
+ ],
+ "sig_keys": [
+  "carried",
+  "sig_keys",
+  "minisign key text carried as stored; the passphrase stays the person's"
+ ],
+ "storage_units": [
+  "carried",
+  "storage_units",
+  "id preserved"
+ ],
+ "storage_units_history": [
+  "carried",
+  "audit_events",
+  "category storage.move"
+ ],
+ "tags": [
+  "carried",
+  "tags",
+  "id preserved"
+ ],
+ "tags2entity": [
+  "carried",
+  "record_tags",
+  "item_type selects the kind"
+ ],
+ "team_events": [
+  "carried",
+  "events",
+  "id preserved; naive times converted from US Central to UTC"
+ ],
+ "team_groups": [
+  "carried",
+  "team_groups",
+  "id preserved"
+ ],
+ "teams": [
+  "carried",
+  "teams",
+  "id preserved"
+ ],
+ "teams2rors": [
+  "not carried",
+  "-",
+  "empty; not used by 2.x New"
+ ],
+ "todolist": [
+  "carried",
+  "todo_items",
+  ""
+ ],
+ "uploads": [
+  "carried",
+  "uploads + file_blobs",
+  "id and long_name (storage_name) preserved; SHA-256 recomputed and compared with the stored hash"
+ ],
+ "users": [
+  "carried",
+  "users + user_identities",
+  "id preserved; password, MFA secret and token columns are not carried; preferences to prefs"
+ ],
+ "users2rors": [
+  "not carried",
+  "-",
+  "empty; not used by 2.x New"
+ ],
+ "users2team_groups": [
+  "carried",
+  "team_group_members",
+  ""
+ ],
+ "users2teams": [
+  "carried",
+  "memberships",
+  ""
+ ]
+}

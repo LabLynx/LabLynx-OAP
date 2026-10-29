@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (c) 2026 LabLynx, Inc.
+# LabLynx.One OCC (Open Core CMS).
+
+[project]
+name = "occ"
+version = "0.1.0"
+description = "LabLynx.One Open Core CMS: a headless, generic content management system (database, HTTP API, Python backend)."
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+# Runtime dependencies: permissive licenses only (recorded in docs/dependencies.json and
+# checked by tests/unit/test_layout.py). The PostgreSQL driver is pg8000 (BSD-3-Clause):
+# psycopg 3, the obvious alternative, is LGPL-3.0, so it is not used.
+dependencies = [
+  "fastapi==0.162.0",
+  "uvicorn==0.54.0",
+  "pydantic==2.14.1",
+  "pg8000==1.31.6",
+  "nh3==0.3.7",
+]
+
+[project.optional-dependencies]
+# Test-only: never installed by occ-api. httpx brings certifi (MPL-2.0), test use only.
+test = ["pytest==9.2.0", "httpx==0.28.1"]
+
+[project.scripts]
+occ = "occ.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests/unit"]
